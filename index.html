@@ -680,5 +680,90 @@
       <div><a href="mailto:info@westernpay.in">info@westernpay.in</a></div>
     </div>
   </footer>
+
+  <script>
+    // Animate stats counters
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const increment = target / 100; // Adjust speed here
+        let current = 0;
+
+        const updateCounter = () => {
+          if (current < target) {
+            current += increment;
+            if (target === 1000000) {
+              counter.textContent = `${Math.floor(current / 1000)}K+`;
+            } else if (target === 99.9) {
+              counter.textContent = `${Math.min(current, target).toFixed(1)}`;
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+            requestAnimationFrame(updateCounter);
+          } else {
+            if (target === 1000000) {
+              counter.textContent = '1M+';
+            } else if (target === 99.9) {
+              counter.textContent = '99.9';
+            } else {
+              counter.textContent = target;
+            }
+          }
+        };
+
+        updateCounter();
+      });
+    }
+
+    // Login modal functionality
+    function showLoginModal() {
+      const email = prompt('Enter your email for Login/Signup:');
+      if (email) {
+        const action = confirm('Click OK for Login, Cancel for Signup');
+        const type = action ? 'signin' : 'signup';
+
+        if (type === 'signup') {
+          const name = prompt('Enter your full name:');
+          sendEmailNotification(type, { email, name });
+        } else {
+          sendEmailNotification(type, { email });
+        }
+      }
+    }
+
+    // Send email notification
+    async function sendEmailNotification(type, data) {
+      try {
+        const response = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ type, data }),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert(`${type === 'signin' ? 'Login' : 'Signup'} request sent successfully! We'll get back to you soon.`);
+        } else {
+          alert('There was an error processing your request. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error processing your request. Please try again.');
+      }
+    }
+
+    // Start counter animation when page loads
+    window.addEventListener('load', () => {
+      setTimeout(animateCounters, 500);
+    });
+
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
