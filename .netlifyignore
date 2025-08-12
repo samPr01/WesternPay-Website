@@ -1,0 +1,23 @@
+# Development files not needed for deployment
+client/
+server/
+shared/
+node_modules/
+AGENTS.md
+README.md
+SSH_PUBLIC_KEY.txt
+components.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+vite.config.ts
+vite.config.server.ts
+package-lock.json
+.prettierrc
+.npmrc
+.dockerignore
+.builder/
+temp_*.html
+*.tmp
+*.bak
+DEPLOYMENT.md
