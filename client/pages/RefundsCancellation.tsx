@@ -1,5 +1,14 @@
 import React from "react";
-import { RotateCcw, X, Clock, AlertTriangle, CheckCircle, FileText, Phone, Mail } from "lucide-react";
+import {
+  RotateCcw,
+  X,
+  Clock,
+  AlertTriangle,
+  CheckCircle,
+  FileText,
+  Phone,
+  Mail,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -15,8 +24,8 @@ export default function RefundsCancellation() {
         "Cancellation within 30 minutes of initiation: Full refund",
         "After 30 minutes but before processing: Partial refund (minus processing fees)",
         "After processing: Refund depends on recipient bank policies",
-        "Failed transfers: Automatic refund within 3-5 business days"
-      ]
+        "Failed transfers: Automatic refund within 3-5 business days",
+      ],
     },
     {
       service: "Bill Payments",
@@ -26,8 +35,8 @@ export default function RefundsCancellation() {
         "Successful payments: No refunds (payments are final)",
         "Failed payments: Automatic refund within 24-48 hours",
         "Duplicate payments: Refund of duplicate amount within 3-5 days",
-        "Wrong biller payments: Case-by-case review required"
-      ]
+        "Wrong biller payments: Case-by-case review required",
+      ],
     },
     {
       service: "Mobile Recharge",
@@ -37,57 +46,62 @@ export default function RefundsCancellation() {
         "Successful recharges: No refunds (recharges are final)",
         "Failed recharges: Automatic refund within 2-4 hours",
         "Wrong number recharges: No refunds (user responsibility)",
-        "Operator issues: Refund processed after operator confirmation"
-      ]
-    }
+        "Operator issues: Refund processed after operator confirmation",
+      ],
+    },
   ];
 
   const cancellationProcess = [
     {
       step: "1",
       title: "Initiate Cancellation",
-      description: "Log into your account and navigate to the transaction you wish to cancel. Click on the 'Cancel' button if available.",
-      icon: X
+      description:
+        "Log into your account and navigate to the transaction you wish to cancel. Click on the 'Cancel' button if available.",
+      icon: X,
     },
     {
       step: "2",
       title: "Review Terms",
-      description: "Review the cancellation terms and any applicable fees. Confirm that you understand the refund timeline and process.",
-      icon: FileText
+      description:
+        "Review the cancellation terms and any applicable fees. Confirm that you understand the refund timeline and process.",
+      icon: FileText,
     },
     {
       step: "3",
       title: "Submit Request",
-      description: "Submit your cancellation request. You'll receive a confirmation email with a reference number for tracking.",
-      icon: CheckCircle
+      description:
+        "Submit your cancellation request. You'll receive a confirmation email with a reference number for tracking.",
+      icon: CheckCircle,
     },
     {
       step: "4",
       title: "Processing",
-      description: "We'll process your cancellation request within the specified timeframe and notify you of the outcome.",
-      icon: Clock
-    }
+      description:
+        "We'll process your cancellation request within the specified timeframe and notify you of the outcome.",
+      icon: Clock,
+    },
   ];
 
   const refundTimelines = [
     {
       type: "Instant Refunds",
       timeframe: "Within 24 hours",
-      description: "For cancellations made within 30 minutes of transaction initiation",
-      icon: Clock
+      description:
+        "For cancellations made within 30 minutes of transaction initiation",
+      icon: Clock,
     },
     {
       type: "Standard Refunds",
       timeframe: "3-5 business days",
       description: "For most refund requests and failed transactions",
-      icon: RotateCcw
+      icon: RotateCcw,
     },
     {
       type: "Complex Cases",
       timeframe: "7-10 business days",
       description: "For disputed transactions or cases requiring investigation",
-      icon: AlertTriangle
-    }
+      icon: AlertTriangle,
+    },
   ];
 
   return (
@@ -103,8 +117,9 @@ export default function RefundsCancellation() {
             Refunds & Cancellation Policy
           </h1>
           <p className="text-xl text-brand-gray max-w-3xl mx-auto leading-relaxed mb-8">
-            At WesternPay, we understand that sometimes you may need to cancel a transaction or request a refund. 
-            This policy outlines our procedures and timelines for refunds and cancellations.
+            At WesternPay, we understand that sometimes you may need to cancel a
+            transaction or request a refund. This policy outlines our procedures
+            and timelines for refunds and cancellations.
           </p>
           <div className="flex items-center justify-center space-x-4 text-sm text-brand-gray">
             <div className="flex items-center space-x-2">
@@ -123,7 +138,8 @@ export default function RefundsCancellation() {
               Refund Policies by Service
             </h2>
             <p className="text-lg text-brand-gray max-w-2xl mx-auto">
-              Different services have different refund policies based on their nature and processing requirements.
+              Different services have different refund policies based on their
+              nature and processing requirements.
             </p>
           </div>
 
@@ -131,7 +147,10 @@ export default function RefundsCancellation() {
             {refundPolicies.map((policy, index) => {
               const Icon = policy.icon;
               return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Card
+                  key={index}
+                  className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
                   <CardHeader className="text-center pb-4">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-8 h-8 text-primary-600" />
@@ -146,7 +165,10 @@ export default function RefundsCancellation() {
                   <CardContent>
                     <ul className="space-y-3">
                       {policy.policies.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start space-x-3 text-sm text-brand-gray">
+                        <li
+                          key={itemIndex}
+                          className="flex items-start space-x-3 text-sm text-brand-gray"
+                        >
                           <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{item}</span>
                         </li>
@@ -165,7 +187,8 @@ export default function RefundsCancellation() {
                 How to Cancel a Transaction
               </h2>
               <p className="text-lg text-brand-gray max-w-2xl mx-auto">
-                Follow these simple steps to cancel a transaction and request a refund.
+                Follow these simple steps to cancel a transaction and request a
+                refund.
               </p>
             </div>
 
@@ -200,7 +223,8 @@ export default function RefundsCancellation() {
                 Refund Timelines
               </h2>
               <p className="text-lg text-brand-gray max-w-2xl mx-auto">
-                Understanding how long it takes to process your refund based on the type of transaction.
+                Understanding how long it takes to process your refund based on
+                the type of transaction.
               </p>
             </div>
 
@@ -242,16 +266,23 @@ export default function RefundsCancellation() {
                   </h3>
                   <div className="space-y-3 text-brand-gray">
                     <p>
-                      • <strong>Processing Fees:</strong> Some transactions may incur processing fees that are non-refundable.
+                      • <strong>Processing Fees:</strong> Some transactions may
+                      incur processing fees that are non-refundable.
                     </p>
                     <p>
-                      • <strong>Bank Processing:</strong> Refunds to bank accounts may take additional time based on your bank's processing schedule.
+                      • <strong>Bank Processing:</strong> Refunds to bank
+                      accounts may take additional time based on your bank's
+                      processing schedule.
                     </p>
                     <p>
-                      • <strong>Currency Conversion:</strong> For international transactions, refunds will be processed in the original currency at current exchange rates.
+                      • <strong>Currency Conversion:</strong> For international
+                      transactions, refunds will be processed in the original
+                      currency at current exchange rates.
                     </p>
                     <p>
-                      • <strong>Fraud Prevention:</strong> We reserve the right to investigate suspicious transactions before processing refunds.
+                      • <strong>Fraud Prevention:</strong> We reserve the right
+                      to investigate suspicious transactions before processing
+                      refunds.
                     </p>
                   </div>
                 </div>
@@ -266,15 +297,18 @@ export default function RefundsCancellation() {
                 Need Help with a Refund?
               </h2>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                If you have questions about refunds or need assistance with a cancellation, 
-                our support team is here to help you 24/7.
+                If you have questions about refunds or need assistance with a
+                cancellation, our support team is here to help you 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 font-semibold">
                   <Mail className="w-4 h-4 mr-2" />
                   Email Support
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 font-semibold">
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 font-semibold"
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   Call Support
                 </Button>

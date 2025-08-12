@@ -3,6 +3,7 @@
 ## Essential Files for Deployment
 
 ### Core Website Files
+
 - `index.html` - Main landing page (30KB)
 - `about-page.html` - About us page (12KB)
 - `faqs-page.html` - FAQ page with interactive content (14KB)
@@ -10,11 +11,13 @@
 - `refunds-cancellation.html` - Refunds and cancellation policy (14KB)
 
 ### Configuration Files
+
 - `package.json` - Project dependencies and scripts
 - `netlify.toml` - Netlify deployment configuration
 - `.gitignore` - Version control exclusions
 
 ### Development Files (Optional for deployment)
+
 - `client/` - React SPA components (for future development)
 - `server/` - Express server components
 - `shared/` - Shared TypeScript interfaces
@@ -29,10 +32,11 @@
 5. **SEO Ready**: Proper meta tags and semantic HTML structure
 
 ## Navigation Structure
+
 ```
 / (index.html)
 ├── /about-page.html
-├── /faqs-page.html  
+├── /faqs-page.html
 ├── /privacy-policy.html
 └── /refunds-cancellation.html
 ```
@@ -40,6 +44,7 @@
 ## Total Size: ~83KB for all HTML files
 
 ## Deployment Ready
+
 ✅ Temporary files cleaned up
 ✅ Back to Home links moved to header
 ✅ All pages optimized and tested
