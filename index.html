@@ -426,8 +426,12 @@
 
     @media (max-width: 1024px){
       .hero-inner{ grid-template-columns: 1fr; }
-      .about .grid, .contact .grid, .footer-grid{ grid-template-columns: 1fr; }
+      .about .grid, .contact .grid{ grid-template-columns: 1fr; }
+      .footer-grid{ grid-template-columns: 1fr 1fr; }
       .hero-art{ min-height: 220px; }
+    }
+    @media (max-width: 720px){
+      .footer-grid{ grid-template-columns: 1fr; }
     }
     @media (max-width: 880px){
       nav ul{ gap: 10px; }
