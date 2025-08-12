@@ -2,7 +2,7 @@ import { Shield, Lock, Eye, Users, FileText, Calendar } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function PrivacyPolicy() {
-  const lastUpdated = "December 8, 2024";
+  const lastUpdated = "December 15, 2024";
 
   const sections = [
     {
