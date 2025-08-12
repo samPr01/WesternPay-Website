@@ -261,6 +261,48 @@
     }
     .about .panel p{ margin: 0; }
 
+    .about-enhanced-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .about-feature-card{
+      background: linear-gradient(180deg, rgba(0,230,184,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(0,230,184,0.2);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: left;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .about-feature-card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(0,230,184,0.4);
+    }
+    .feature-icon{
+      width: 48px;
+      height: 48px;
+      background: rgba(0,230,184,0.15);
+      border: 1px solid rgba(0,230,184,0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .about-feature-card h3{
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+    .about-feature-card p{
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
     .services-grid{
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
