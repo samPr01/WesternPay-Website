@@ -2,7 +2,7 @@ import { Shield, Lock, Eye, Users, FileText, Calendar } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function PrivacyPolicy() {
-  const lastUpdated = "December 8, 2024";
+  const lastUpdated = "December 15, 2024";
 
   const sections = [
     {
@@ -11,17 +11,17 @@ export default function PrivacyPolicy() {
       content: [
         {
           subtitle: "Personal Information",
-          text: "We collect information you provide directly to us, such as when you create an account, make a transaction, or contact our support team. This may include your name, email address, phone number, date of birth, address, and government-issued identification documents."
+          text: "We collect information you provide directly to us, such as when you create an account, make a transaction, or contact our support team. This may include your name, email address, phone number, date of birth, address, and government-issued identification documents.",
         },
         {
           subtitle: "Transaction Information",
-          text: "We collect information about your transactions, including payment method details, transaction amounts, recipient information, and transaction history to provide our services and comply with regulatory requirements."
+          text: "We collect information about your transactions, including payment method details, transaction amounts, recipient information, and transaction history to provide our services and comply with regulatory requirements.",
         },
         {
           subtitle: "Device and Usage Information",
-          text: "We automatically collect information about your device and how you interact with our services, including IP address, browser type, operating system, device identifiers, and usage patterns."
-        }
-      ]
+          text: "We automatically collect information about your device and how you interact with our services, including IP address, browser type, operating system, device identifiers, and usage patterns.",
+        },
+      ],
     },
     {
       title: "How We Use Your Information",
@@ -29,17 +29,17 @@ export default function PrivacyPolicy() {
       content: [
         {
           subtitle: "Service Provision",
-          text: "We use your information to provide, maintain, and improve our payment services, process transactions, verify your identity, and ensure compliance with applicable laws and regulations."
+          text: "We use your information to provide, maintain, and improve our payment services, process transactions, verify your identity, and ensure compliance with applicable laws and regulations.",
         },
         {
           subtitle: "Communication",
-          text: "We use your contact information to send you important updates about your account, transaction confirmations, security alerts, and customer support communications."
+          text: "We use your contact information to send you important updates about your account, transaction confirmations, security alerts, and customer support communications.",
         },
         {
           subtitle: "Security and Fraud Prevention",
-          text: "We use your information to detect, prevent, and investigate fraudulent activities, security breaches, and other potentially prohibited or illegal activities."
-        }
-      ]
+          text: "We use your information to detect, prevent, and investigate fraudulent activities, security breaches, and other potentially prohibited or illegal activities.",
+        },
+      ],
     },
     {
       title: "Information Sharing and Disclosure",
@@ -47,17 +47,17 @@ export default function PrivacyPolicy() {
       content: [
         {
           subtitle: "Service Providers",
-          text: "We may share your information with trusted third-party service providers who assist us in operating our platform, processing payments, providing customer support, and conducting business operations."
+          text: "We may share your information with trusted third-party service providers who assist us in operating our platform, processing payments, providing customer support, and conducting business operations.",
         },
         {
           subtitle: "Legal Requirements",
-          text: "We may disclose your information when required by law, regulation, legal process, or government request, or to protect our rights, property, or safety, or that of our users or the public."
+          text: "We may disclose your information when required by law, regulation, legal process, or government request, or to protect our rights, property, or safety, or that of our users or the public.",
         },
         {
           subtitle: "Business Transfers",
-          text: "In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction, subject to the same privacy protections outlined in this policy."
-        }
-      ]
+          text: "In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction, subject to the same privacy protections outlined in this policy.",
+        },
+      ],
     },
     {
       title: "Data Security",
@@ -65,17 +65,17 @@ export default function PrivacyPolicy() {
       content: [
         {
           subtitle: "Security Measures",
-          text: "We implement industry-standard security measures to protect your personal information, including encryption, secure servers, access controls, and regular security assessments."
+          text: "We implement industry-standard security measures to protect your personal information, including encryption, secure servers, access controls, and regular security assessments.",
         },
         {
           subtitle: "Data Retention",
-          text: "We retain your information for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements."
+          text: "We retain your information for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements.",
         },
         {
           subtitle: "Data Breach Response",
-          text: "In the event of a data breach, we will notify affected users and relevant authorities as required by law, and take appropriate steps to mitigate any potential harm."
-        }
-      ]
+          text: "In the event of a data breach, we will notify affected users and relevant authorities as required by law, and take appropriate steps to mitigate any potential harm.",
+        },
+      ],
     },
     {
       title: "Your Rights and Choices",
@@ -83,18 +83,18 @@ export default function PrivacyPolicy() {
       content: [
         {
           subtitle: "Access and Correction",
-          text: "You have the right to access, update, or correct your personal information through your account settings or by contacting our support team."
+          text: "You have the right to access, update, or correct your personal information through your account settings or by contacting our support team.",
         },
         {
           subtitle: "Data Portability",
-          text: "You may request a copy of your personal information in a structured, machine-readable format for transfer to another service provider."
+          text: "You may request a copy of your personal information in a structured, machine-readable format for transfer to another service provider.",
         },
         {
           subtitle: "Deletion",
-          text: "You may request deletion of your personal information, subject to our legal obligations to retain certain data for regulatory compliance and fraud prevention."
-        }
-      ]
-    }
+          text: "You may request deletion of your personal information, subject to our legal obligations to retain certain data for regulatory compliance and fraud prevention.",
+        },
+      ],
+    },
   ];
 
   return (
@@ -110,8 +110,9 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-xl text-brand-gray max-w-3xl mx-auto leading-relaxed mb-8">
-            At WesternPay, we are committed to protecting your privacy and ensuring the security of your personal information. 
-            This policy explains how we collect, use, and safeguard your data.
+            At WesternPay, we are committed to protecting your privacy and
+            ensuring the security of your personal information. This policy
+            explains how we collect, use, and safeguard your data.
           </p>
           <div className="flex items-center justify-center space-x-4 text-sm text-brand-gray">
             <div className="flex items-center space-x-2">
@@ -132,12 +133,15 @@ export default function PrivacyPolicy() {
                 Introduction
               </h2>
               <p className="text-brand-gray leading-relaxed mb-4">
-                WesternPay ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, 
-                use, disclose, and safeguard your information when you use our payment services, website, and mobile applications.
+                WesternPay ("we," "our," or "us") is committed to protecting
+                your privacy. This Privacy Policy explains how we collect, use,
+                disclose, and safeguard your information when you use our
+                payment services, website, and mobile applications.
               </p>
               <p className="text-brand-gray leading-relaxed">
-                By using our services, you agree to the collection and use of information in accordance with this policy. 
-                If you do not agree with our policies and practices, please do not use our services.
+                By using our services, you agree to the collection and use of
+                information in accordance with this policy. If you do not agree
+                with our policies and practices, please do not use our services.
               </p>
             </CardContent>
           </Card>
@@ -181,15 +185,17 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-bold text-brand-navy mb-4">
                 Additional Information
               </h2>
-              
+
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold text-brand-navy mb-2">
                     Cookies and Tracking Technologies
                   </h3>
                   <p className="text-brand-gray leading-relaxed">
-                    We use cookies and similar tracking technologies to enhance your experience, analyze usage patterns, 
-                    and provide personalized content. You can control cookie settings through your browser preferences.
+                    We use cookies and similar tracking technologies to enhance
+                    your experience, analyze usage patterns, and provide
+                    personalized content. You can control cookie settings
+                    through your browser preferences.
                   </p>
                 </div>
 
@@ -198,8 +204,10 @@ export default function PrivacyPolicy() {
                     International Data Transfers
                   </h3>
                   <p className="text-brand-gray leading-relaxed">
-                    Your information may be transferred to and processed in countries other than your own. 
-                    We ensure appropriate safeguards are in place to protect your data in accordance with applicable laws.
+                    Your information may be transferred to and processed in
+                    countries other than your own. We ensure appropriate
+                    safeguards are in place to protect your data in accordance
+                    with applicable laws.
                   </p>
                 </div>
 
@@ -208,9 +216,10 @@ export default function PrivacyPolicy() {
                     Children's Privacy
                   </h3>
                   <p className="text-brand-gray leading-relaxed">
-                    Our services are not intended for children under 18 years of age. We do not knowingly collect 
-                    personal information from children under 18. If you believe we have collected such information, 
-                    please contact us immediately.
+                    Our services are not intended for children under 18 years of
+                    age. We do not knowingly collect personal information from
+                    children under 18. If you believe we have collected such
+                    information, please contact us immediately.
                   </p>
                 </div>
 
@@ -219,9 +228,10 @@ export default function PrivacyPolicy() {
                     Changes to This Policy
                   </h3>
                   <p className="text-brand-gray leading-relaxed">
-                    We may update this Privacy Policy from time to time. We will notify you of any changes by posting 
-                    the new policy on this page and updating the "Last updated" date. We encourage you to review this 
-                    policy periodically.
+                    We may update this Privacy Policy from time to time. We will
+                    notify you of any changes by posting the new policy on this
+                    page and updating the "Last updated" date. We encourage you
+                    to review this policy periodically.
                   </p>
                 </div>
               </div>
@@ -231,17 +241,18 @@ export default function PrivacyPolicy() {
           {/* Contact Information */}
           <Card className="mt-8 bg-gradient-to-r from-primary-600 to-brand-teal border-0">
             <CardContent className="p-8 text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Contact Us
-              </h2>
+              <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                If you have any questions about this Privacy Policy or our data practices, 
-                please contact our privacy team.
+                If you have any questions about this Privacy Policy or our data
+                practices, please contact our privacy team.
               </p>
               <div className="space-y-2 text-blue-100">
                 <p>Email: privacy@westernpay.in</p>
                 <p>Phone: 1800-WESTERN</p>
-                <p>Address: 213, Diamond Trading Centre, New Palasia, Indore 474001 (MP) India</p>
+                <p>
+                  Address: 213, Diamond Trading Centre, New Palasia, Indore
+                  474001 (MP) India
+                </p>
               </div>
             </CardContent>
           </Card>
