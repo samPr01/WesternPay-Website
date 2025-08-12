@@ -43,10 +43,17 @@
 
 ## Total Size: ~83KB for all HTML files
 
-## Deployment Ready
+## Netlify Configuration Fixed
+✅ Updated `netlify.toml` to publish from root directory
+✅ Added page redirects for static HTML files
+✅ Created `_redirects` file for backup routing
+✅ Added `.netlifyignore` to exclude development files
+✅ Deployment now serves static HTML pages correctly
 
+## Deployment Ready
 ✅ Temporary files cleaned up
 ✅ Back to Home links moved to header
 ✅ All pages optimized and tested
 ✅ Cross-browser compatible
 ✅ Fast loading and accessible
+✅ Netlify routing configured for static pages
