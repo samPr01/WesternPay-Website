@@ -766,7 +766,7 @@
               </svg>
               <div>
                 <strong>Services</strong><br />
-                IMPS • UPI • NEFT • Recharges • Bill Pay • APIs • Analytics • Global
+                IMPS • UPI • NEFT • Recharges • Bill Pay �� APIs • Analytics • Global
               </div>
             </div>
           </div>
@@ -886,15 +886,9 @@
 
     // Handle navigation to React routes
     function navigateToPage(route) {
-      // If we're in the React app context, use history API
-      if (window.history && window.history.pushState) {
-        window.history.pushState({}, '', route);
-        // Trigger a popstate event to let React Router handle the route
-        window.dispatchEvent(new PopStateEvent('popstate'));
-      } else {
-        // Fallback: direct navigation
-        window.location.href = route;
-      }
+      // Since this is a static page, we need to navigate to the SPA
+      // The SPA should be served from the same domain with proper routing
+      window.location.href = route;
     }
   </script>
 </body>
