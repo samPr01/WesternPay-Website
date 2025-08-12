@@ -1,0 +1,8 @@
+# Static page redirects
+/about-page /about-page.html 200
+/faqs-page /faqs-page.html 200
+/privacy-policy /privacy-policy.html 200
+/refunds-cancellation /refunds-cancellation.html 200
+
+# API redirects
+/api/* /.netlify/functions/api/:splat 200
