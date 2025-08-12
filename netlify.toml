@@ -1,13 +1,34 @@
 [build]
-  command = "npm run build:client"
+  command = "echo 'No build needed for static HTML'"
   functions = "netlify/functions"
-  publish = "dist/spa"
-
+  publish = "."
 
 [functions]
   external_node_modules = ["express"]
   node_bundler = "esbuild"
-  
+
+# Static page redirects
+[[redirects]]
+  from = "/about-page"
+  to = "/about-page.html"
+  status = 200
+
+[[redirects]]
+  from = "/faqs-page"
+  to = "/faqs-page.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/refunds-cancellation"
+  to = "/refunds-cancellation.html"
+  status = 200
+
+# API redirects (keep existing API functionality)
 [[redirects]]
   force = true
   from = "/api/*"
