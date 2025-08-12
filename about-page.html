@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>About Us — WesternPay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Learn about WesternPay - Empowering Modern India & Beyond with digital payment solutions." />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <style>
+    :root{
+      --bg: #0b0f14;
+      --bg-elev: #111826;
+      --surface: #0f1623;
+      --text: #e6f1ff;
+      --muted: #9aa4b2;
+      --border: #1f2a3a;
+      --accent: #00e6b8;
+      --accent-weak: rgba(0,230,184,0.15);
+      --danger: #ff6b6b;
+      --radius: 14px;
+      --radius-sm: 10px;
+      --container: 1200px;
+      --shadow-1: 0 10px 30px rgba(0,0,0,0.35);
+      --shadow-2: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 85% -10%, rgba(0,230,184,0.06), transparent 60%) no-repeat,
+                  radial-gradient(900px 600px at -10% 15%, rgba(0,230,184,0.05), transparent 60%) no-repeat,
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container{
+      width: 100%;
+      max-width: var(--container);
+      margin-inline: auto;
+      padding: 0 20px;
+    }
+
+    .brand{
+      display: inline-flex;
+      align-items: center;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      font-size: 20px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .brand .dot{
+      width: 10px; height: 10px; border-radius: 50%;
+      margin-left: 8px;
+      background: radial-gradient(circle at 30% 30%, #67ffe0, var(--accent));
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(to bottom, rgba(11,15,20,0.85), rgba(11,15,20,0.35));
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    main{
+      padding: 80px 0;
+      min-height: 80vh;
+    }
+
+    .page-title{
+      display: inline-block;
+      padding: 8px 16px;
+      background: linear-gradient(90deg, #67ffe0, var(--accent));
+      color: #00251e;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: clamp(18px, 2.8vw, 22px);
+      margin-bottom: 20px;
+    }
+
+    .page-desc{
+      color: var(--muted);
+      margin: 0 auto 40px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .content{
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .hero-section{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero-section h2{
+      font-size: clamp(24px, 4vw, 32px);
+      margin: 20px 0;
+      background: linear-gradient(180deg, #eafdff 0%, #b8d1ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .features-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .feature-card{
+      background: linear-gradient(180deg, rgba(0,230,184,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(0,230,184,0.2);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .feature-card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(0,230,184,0.4);
+    }
+
+    .feature-icon{
+      width: 48px;
+      height: 48px;
+      background: rgba(0,230,184,0.15);
+      border: 1px solid rgba(0,230,184,0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .feature-card h3{
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    .feature-card p{
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .stats-section{
+      background: linear-gradient(180deg, var(--surface), #0b121d);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .stats-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .stat-item{
+      text-align: center;
+    }
+
+    .stat-number{
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 900;
+      background: linear-gradient(180deg, #67ffe0, var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .stat-label{
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .mission-section{
+      background: linear-gradient(180deg, var(--surface), #0b121d);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin: 40px 0;
+    }
+
+    .back-link{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 32px;
+      font-weight: 600;
+    }
+
+    .back-link:hover{
+      text-decoration: underline;
+    }
+
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 28px 0 36px;
+      color: var(--muted);
+      font-size: 14px;
+      background: linear-gradient(180deg, rgba(0,230,184,0.05), rgba(0,0,0,0) 50%);
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px){
+      .features-grid{
+        grid-template-columns: 1fr;
+      }
+      .stats-grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px){
+      .stats-grid{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="brand">
+        WesternPay <span class="dot"></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="text-align: center;">
+      <a href="/" class="back-link">← Back to Home</a>
+      
+      <h1 class="page-title">About WesternPay</h1>
+      <p class="page-desc">Empowering Modern India & Beyond with innovative digital payment solutions.</p>
+
+      <div class="content">
+        <div class="hero-section">
+          <h2>Building the Future of Digital Payments</h2>
+          <p style="color: var(--muted); max-width: 700px; margin: 0 auto;">
+            WesternPay is building the connective tissue for digital money movement—serving individuals,
+            startups, and enterprises. Our mission blends financial accessibility with developer-grade tools:
+            instant domestic rails, intelligent bill and utility workflows, intuitive recharges, and
+            open fintech APIs that unlock new business models.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67ffe0" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h3>Lightning Fast Transactions</h3>
+            <p>
+              From IMPS, UPI, and NEFT to cross-border remittances, WesternPay combines speed, security,
+              and scale. Process payments in real-time with our optimized infrastructure.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67ffe0" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Enterprise Security</h3>
+            <p>
+              Bank-grade encryption, multi-factor authentication, and compliance with global financial 
+              regulations ensure your data and transactions are always protected.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67ffe0" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3>Global Reach</h3>
+            <p>
+              Scale to 190+ countries with compliant, secure cross-border rails. Accept payments from 
+              190+ countries with multi-currency support and localized payment methods.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#67ffe0" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3>Developer APIs</h3>
+            <p>
+              Build with simplicity using our comprehensive APIs. Launch with confidence using our 
+              well-documented SDKs and grow without limits with scalable infrastructure.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats-section">
+          <h2 style="color: var(--accent); margin: 0 0 16px;">Our Impact</h2>
+          <p style="color: var(--muted); margin: 0;">Trusted by millions across India and beyond</p>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">190+</div>
+              <div class="stat-label">Countries Served</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1M+</div>
+              <div class="stat-label">Daily Transactions</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">99.9%</div>
+              <div class="stat-label">Uptime</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15K+</div>
+              <div class="stat-label">Business Partners</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mission-section">
+          <h2 style="color: var(--accent); margin: 0 0 20px;">Our Mission</h2>
+          <p style="color: var(--muted); margin: 0 0 16px;">
+            Build with simplicity. Launch with confidence. Grow without limits.
+            WesternPay is your partner for domestic and global payments, now in 190+ countries.
+          </p>
+          <p style="color: var(--muted); margin: 0;">
+            Whether you're streamlining consumer payments or embedding financial services in
+            your products, our platform adapts to your ambition. Backed by insights-driven analytics and
+            compliant global corridors, we help you move money confidently—across India and across borders.
+          </p>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+          <h2 style="color: var(--accent); margin-bottom: 16px;">Get Started Today</h2>
+          <p style="color: var(--muted); margin-bottom: 24px;">
+            Join thousands of businesses that trust WesternPay for their payment needs.
+          </p>
+          <a href="/" style="display: inline-block; padding: 12px 24px; background: linear-gradient(90deg, #67ffe0, var(--accent)); color: #00251e; border-radius: 8px; font-weight: 700; text-decoration: none;">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="brand" style="margin-bottom: 16px;">WesternPay <span class="dot"></span></div>
+        <p>© 2025 WesternPay. All rights reserved.</p>
+        <p><a href="mailto:info@westernpay.in" style="color: var(--accent);">info@westernpay.in</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
