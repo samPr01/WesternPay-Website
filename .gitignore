@@ -30,3 +30,14 @@ dist-ssr
 temp_*.html
 *.tmp
 *.bak
+
+# Development files not needed for deployment
+AGENTS.md
+README.md
+SSH_PUBLIC_KEY.txt
+components.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+vite.config.ts
+vite.config.server.ts
