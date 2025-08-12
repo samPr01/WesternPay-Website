@@ -883,6 +883,19 @@
 
     // Update year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Handle navigation to React routes
+    function navigateToPage(route) {
+      // If we're in the React app context, use history API
+      if (window.history && window.history.pushState) {
+        window.history.pushState({}, '', route);
+        // Trigger a popstate event to let React Router handle the route
+        window.dispatchEvent(new PopStateEvent('popstate'));
+      } else {
+        // Fallback: direct navigation
+        window.location.href = route;
+      }
+    }
   </script>
 </body>
 </html>
