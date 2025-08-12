@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function RefundsCancellation() {
-  const lastUpdated = "December 8, 2024";
+  const lastUpdated = "December 15, 2024";
 
   const refundPolicies = [
     {
