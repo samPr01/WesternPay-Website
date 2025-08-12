@@ -21,5 +21,12 @@ export function createServer() {
   app.get("/api/demo", handleDemo);
   app.post("/api/send-email", handleSendEmail);
 
+  // SPA fallback routing - serve React app for all non-API routes
+  app.get(["/about-page", "/faqs-page", "/privacy-policy", "/refunds-cancellation", "/login", "/signup", "/services", "/features", "/contact", "/about"], (req, res) => {
+    // In development, let Vite handle this
+    // In production, this would serve the built React app
+    res.redirect("/");
+  });
+
   return app;
 }
