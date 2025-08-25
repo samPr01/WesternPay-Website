@@ -27,8 +27,9 @@ export default function Footer() {
               <span className="text-xl font-bold text-white">WesternPay</span>
             </div>
             <p className="text-sm leading-6 text-primary-200 max-w-md">
-              Empowering Modern India & Beyond with instant money transfer, bill payments, 
-              mobile & DTH recharge, fintech APIs, smart analytics, and global payment integration.
+              Empowering Modern India & Beyond with instant money transfer, bill
+              payments, mobile & DTH recharge, fintech APIs, smart analytics,
+              and global payment integration.
             </p>
           </div>
 
