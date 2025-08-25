@@ -208,7 +208,7 @@ export default function AboutPage() {
                 Email: info@dekainpay.com
               </p>
               <p className="text-brand-navy font-medium">
-                Address: 213, Diamond Trading Centre, New Palasia, Indore 474001
+                Address: 213, Diamond Trading Centre, New Palasia, Indore 452001
                 (MP) India
               </p>
             </div>

@@ -241,7 +241,7 @@ export default function PrivacyPolicy() {
               <div className="space-y-2 text-blue-100">
                 <p>Email: privacy@westernpay.in</p>
                 <p>Phone: 1800-WESTERN</p>
-                <p>Address: 213, Diamond Trading Centre, New Palasia, Indore 474001 (MP) India</p>
+                <p>Address: 213, Diamond Trading Centre, New Palasia, Indore 452001 (MP) India</p>
               </div>
             </CardContent>
           </Card>
